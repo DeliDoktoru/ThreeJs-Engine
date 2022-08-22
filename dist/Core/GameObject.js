@@ -9,11 +9,13 @@ class GameObject {
         this.components = [];
         if (pos == undefined)
             pos = new Vector3_1.Vector3(0, 0, 0);
+        this.scene = world.scene;
         this.threeObject = new three_1.Object3D();
         this.threeObject.position.set(pos.x, pos.y, pos.z);
         this.transform = new Transform_1.Transform(this);
         this.transform.gameobject = this;
         this.myWorld = world;
+        this.scene.add(this.threeObject);
         world.gameObjects.push(this);
     }
     Update() {

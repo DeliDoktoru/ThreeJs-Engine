@@ -9,9 +9,15 @@ class MeshRenderer extends Component_1.Component {
     }
     Init() {
         super.Init();
-        this.scene = this.gameobject.myWorld.scene;
+        this.gameobject.scene.add(this.mesh);
         this.gameobject.threeObject.add(this.mesh);
-        this.gameobject.threeObject.position.set(0, 0, 0);
+        console.log(this.mesh.scale);
+        console.log(this.mesh.position);
+        console.log(this.mesh.rotation);
+        console.log(this.gameobject.threeObject.scale);
+        console.log(this.gameobject.threeObject.position);
+        console.log(this.gameobject.threeObject.rotation);
+        // this.gameobject.threeObject.position.set(0,0,0);
     }
     Awake() {
         super.Awake();

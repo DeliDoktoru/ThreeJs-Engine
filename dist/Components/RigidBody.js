@@ -2,12 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.RigidBody = void 0;
 const Component_1 = require("../Core/Component");
-const CANNON = require("cannon-es");
+const cannon_es_1 = require("cannon-es");
 const Collider_1 = require("./Collider");
 class RigidBody extends Component_1.Component {
     constructor(_mass) {
         super();
-        this.body = new CANNON.Body({ mass: _mass });
+        this.body = new cannon_es_1.Body({ mass: _mass });
     }
     Init() {
         super.Init();

@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Component = void 0;
 class Component {
     constructor() {
-        this.typeName = typeof this;
     }
     Init() {
         this.transform = this.gameobject.transform;
