@@ -9,6 +9,7 @@ class World {
         this.scene = s;
         this.physicsWorld = pw;
         this.clock = new three_1.Clock();
+        test: three_1.Object3D;
     }
     Update() {
         this.deltaTime = this.clock.getDelta();

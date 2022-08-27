@@ -29,7 +29,7 @@ class RigidBody extends Component_1.Component {
     }
     Update() {
         super.Update();
-        this.transform.LocalPosition.set(this.body.position.x, this.body.position.y, this.body.position.z);
+        this.gameobject.position.set(this.body.position.x, this.body.position.y, this.body.position.z);
     }
 }
 exports.RigidBody = RigidBody;

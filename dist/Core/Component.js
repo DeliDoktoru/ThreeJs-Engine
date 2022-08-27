@@ -5,7 +5,6 @@ class Component {
     constructor() {
     }
     Init() {
-        this.transform = this.gameobject.transform;
     }
     Awake() {
     }

@@ -6,4 +6,5 @@ export declare class MeshRenderer extends Component {
     Init(): void;
     Awake(): void;
     Update(): void;
+    RemoveComponent(): void;
 }

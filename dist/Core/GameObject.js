@@ -1,21 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.GameObject = void 0;
-const Transform_1 = require("../Components/Transform");
 const Vector3_1 = require("three/src/math/Vector3");
 const three_1 = require("three");
-class GameObject {
+class GameObject extends three_1.Object3D {
     constructor(world, pos) {
+        super();
         this.components = [];
         if (pos == undefined)
             pos = new Vector3_1.Vector3(0, 0, 0);
         this.scene = world.scene;
-        this.threeObject = new three_1.Object3D();
-        this.threeObject.position.set(pos.x, pos.y, pos.z);
-        this.transform = new Transform_1.Transform(this);
-        this.transform.gameobject = this;
+        this.position.set(pos.x, pos.y, pos.z);
         this.myWorld = world;
-        this.scene.add(this.threeObject);
+        this.scene.add(this);
         world.gameObjects.push(this);
     }
     Update() {
@@ -54,7 +51,7 @@ class GameObject {
         this.components.forEach(x => {
             x.RemoveComponent();
         });
-        this.threeObject.remove();
+        this.remove();
     }
 }
 exports.GameObject = GameObject;
